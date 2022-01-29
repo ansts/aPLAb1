@@ -1,4 +1,4 @@
-# Generates ROC curves to compare diffrent string metrics (editing distances) 
+# Generates ROC curves to compare different string metrics (editing distances) 
 # applied to the original AA sequences as well as to recoded AA sequences 
 # to emphasize AA pairs of common properties, as well as pairwise alignment data
 
