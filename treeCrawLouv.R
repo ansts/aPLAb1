@@ -13,12 +13,12 @@ treeCrawLouv=function(L, G, s=1000, r=NULL, nn="C"){
   cl=aggregate(L,by=list(cl), "list")$x
   l=lengths(cl)
   ni=paste(nn,seq_along(cl), sep="_")
-  print(ni)
+  #print(sum(l))
   x=lapply(seq_along(cl),function(i){
     co=cl[i]
     if (length(co[[1]])>s) {              
         nii=ni[i]
-        y=treeCrawLouv(co[[1]],g, s=s, nn=nii)
+        y=treeCrawLouv(co[[1]],g, s=s, r=r, nn=nii)
         return(y)
       }
       else {
