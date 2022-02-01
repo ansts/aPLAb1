@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#PBS -q lifesci
+#PBS -l nodes=1:ppn=16
+#PBS l walltime=60:00:00
+#PBS -N Adj
+#PBS -o Adj${counter}_out
+#PBS -e Adj${counter}_err
+cd ~/APLS
+
+
+/opt/soft/R-3.5.0/bin/Rscript --no-save --no-restore runAdj.R $counter
