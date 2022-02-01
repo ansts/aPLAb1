@@ -1,11 +1,11 @@
-treeCrawLouv=function(L, G, s=1000, nn="C"){
+treeCrawLouv=function(L, G, s=1000, r=NULL, nn="C"){
   require(igraph)
   require(stringi)
   
   g=induced.subgraph(G,L)
   
   cl=cluster_louvain(g)$memberships
-  nom=nrow(cl)
+  if (is.null(r)) nom=nrow(cl) else nom=r     
   cl=cl[nom,]
   if (max(cl)==1) {
     return("atomic")
